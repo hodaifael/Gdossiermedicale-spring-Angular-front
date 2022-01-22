@@ -1,0 +1,45 @@
+<div class="grid grid-cols-12 gap-6 mt-5">
+                    
+    <!-- BEGIN: Data List -->
+    <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+        <table class="table table-report -mt-2">
+            <thead>
+                <tr>
+                    <th class="whitespace-no-wrap">date </th>
+                    <th class="text-center whitespace-no-wrap">time </th>
+                    <th class="text-center whitespace-no-wrap">medecin </th>
+                 
+                    <th class="text-center whitespace-no-wrap">ACTIONS</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                <tr class="intro-x" *ngFor="let emp of Rdvs ">
+                    
+                    <td>
+                        <div  class="font-medium whitespace-no-wrap">{{emp.date_rdv}}</div> 
+                    </td>
+                    <td>
+                        <div  class="font-medium whitespace-no-wrap">{{emp.heur_rdv}}</div> 
+                    </td>
+                    <td>
+                        <div  class="font-medium whitespace-no-wrap">{{emp.patien.nom}} {{emp.patien.prenom}}</div> 
+                    </td>
+                  
+                    
+                   
+                    <td class="table-report__action w-56">
+                        <div class="flex justify-center items-center">
+                            <a class="flex items-center mr-3" (click)="delete(emp.id)"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> delete </a>
+                        </div>
+                    </td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+    <!-- END: Data List -->
+    <!-- BEGIN: Pagination -->
+   
+    <!-- END: Pagination -->
+</div>

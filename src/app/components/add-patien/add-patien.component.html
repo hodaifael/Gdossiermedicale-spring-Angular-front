@@ -1,0 +1,54 @@
+
+<div class="container-fluid ">
+    <div style="top:20px;" class="app-content content">
+     
+     <div class="col-md-6 col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title">insert Patien</h4>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="card-body">
+                                            <form class="form form-vertical" (ngSubmit)="insertPatien()">
+                                                <div class="form-body">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="first-name-vertical">nom</label>
+                                                                <input type="text"  class="form-control" [(ngModel)]="patien.nom" name="nom" placeholder="codep">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="form-group">
+                                                                <label for="email-id-vertical">prenom</label>
+                                                                <input type="text"  class="form-control" [(ngModel)]="patien.prenom" name="prenom" placeholder="Email">
+                                                            </div>
+                                                        </div>
+                                                        
+                                                       
+                                                        
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        
+                                                        
+                                                       <div class="alert alert-success" *ngIf='message !="" ' role="alert">
+                                                            <p class="mb-0">
+                                                            {{ message }}
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <input type="submit" class="btn btn-primary mr-1 mb-1" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+          </div>
+          
+                                </div>
+    

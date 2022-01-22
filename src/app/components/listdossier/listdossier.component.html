@@ -1,0 +1,68 @@
+
+<div class="container-fluid ">
+    <div style="top:20px;font-size: 18px;" class="app-content content">
+                    <!-- Data list view starts -->
+                    <section  class="data-thumb-view-header">
+                        
+                        <!-- dataTable starts -->
+                      <div class="table-responsive">
+                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+                            <div class="top">
+                                    <div class="actions action-btns">
+                                      
+                                    </div>
+                                    <div class="action-filters">
+                                        
+                                        <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                        <label><input type="search" class="form-control " style="font-size: 18px;width:300px;" [(ngModel)]="search" (input)="searchByname()" placeholder="" aria-controls="DataTables_Table_0"></label>
+                                        </div>
+                                    </div>
+                            </div>  
+                             <div class="card">
+                            <table class="table ">
+                                <thead>
+                                    <tr >
+                                       
+                                        <th>date</th>
+                                        <th>description</th>
+                                        <th>patien</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                 
+                                    <tr *ngFor="let emp of Dossier ">
+                                       
+                                        
+                                        <td class="product-name">{{ emp.date }}</td>
+                                        <td class="product-name">{{ emp.description }}</td>
+                                        <td class="product-category">{{ emp.patien.nom }}  {{ emp.patien.prenom }}</td>                                       
+                                        <td class="product-action">
+                                            <a class="action-delete" (click)="delete(emp.id)"><i class="feather icon-trash fa-lg"></i></a>
+                                            
+                                        </td>
+                                       
+                                    </tr>
+                                  
+                                </tbody>
+                            </table>
+                           
+                        </div>
+                        </div>
+                        </div>
+    
+                        <!-- dataTable ends -->
+                    
+    
+                        <!-- add new sidebar ends -->
+                    </section>
+                    <!-- Data list view end -->
+    
+                </div>
+                
+            
+            </div>
+    
+        <!-- END: Content-->
+    
+        
